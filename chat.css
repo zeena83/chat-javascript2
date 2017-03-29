@@ -1,0 +1,20 @@
+*{
+	margin: 20px;
+	font-family: Arial;
+}
+
+.col-sm-12{
+	background-color: white;
+}
+
+
+body { 
+  background: url(bild.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>VÄLKOMMEN TILL MIN WEBBSIDA</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="chat.css" media="screen">
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/bootstrap.css" media="screen">
+<style type="text/css"></style>
+	
+
+<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAP_-fG1ZS_MUZvI8PElTYHyt0XVhgaXXc",
+    authDomain: "javascript-2.firebaseapp.com",
+    databaseURL: "https://javascript-2.firebaseio.com",
+    storageBucket: "javascript-2.appspot.com",
+    messagingSenderId: "756947581081"
+  };
+  firebase.initializeApp(config);
+</script>
+	
+</head>
+    
+<body>
+    
+    
+   
+       <div class="container">
+		   
+		   
+		   
+		   <div class="form-group">
+				 <h1 style="color: black; text-align: center;font-weight: bolder;
+	font-style: italic;">Varmt välkomna, mina kära vänner!</h1> <br><br><br>
+                <input type="text"    placeholder="Förnamn" class="form-control" id="name"> <br>
+			    <input type="text"    placeholder="Efternamn" class="form-control" id="name2">
+			    
+			    <div>
+				<button type="button" class="btn btn-success" id="loggain">Logga in</button>
+				<button type="button" class="btn btn-success" id="loggaut">Logga ut</button>
+				</div>
+			   
+			   <div><h1 style="color: white; font-size:25px;" id="message"></h1></div>
+			   
+			  
+			   
+			   <label for="comment"></label>
+               <textarea class="form-control" placeholder="Skriv ditt meddelande här!" rows="5" id="comment"></textarea> <br>
+			   
+				<di>
+			   
+			   <button type="button"  class="btn btn-success" id="send">Skicka</button>
+			   </di>
+		   </div>
+
+			 <div class="row">
+				 <div class="col-sm-12" id="chatMe">
+				 
+				 
+				 </div>
+		    </div>  
+		   <p id="demo"></p>
+	</div> 
+		   
+   
+		   
+		  
+
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+<script type="text/javascript" src="chat.js"></script>
+	<script src="js/bootstrap.js"></script>
+    
+</body>
+</html>
