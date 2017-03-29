@@ -15,7 +15,8 @@ let btnLoggaUt = document.getElementById('loggaut');
 let meddelande = document.getElementById('message');
 let msm = document.getElementById('comment');
 let btnSend = document.getElementById('send');
-let chat = document.getElementById('chatMe');	
+let chat = document.getElementById('chatMe');
+let btnGitHub = document.getElementById('gitHub')
 btnLoggaUt.style.display = "none";
 	
 	
@@ -125,6 +126,29 @@ btnLoggaUt.style.display = "none";
 	}
 
 	//console.log(hours + ":" + minutes + " " + suffix)
+	
+	
+	
+	
+	
+	
+	// logga in med github
+	
+	btnGitHub = addEventListener('click', function(){
+	
+    let provider = new firebase.auth.GithubAuthProvider();   // Ett objekt för att hantera GitHub-autentisering
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+	// Om autentisering lyckas, så finns användarinfo i user
+	let user = result.user;
+		
+		console.log(user);
+                 
+});
+		console.log(provider);
+	});
+	
+	
+	
 	
 	
 	
