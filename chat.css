@@ -16,5 +16,7 @@ body {
   background-size: cover;
 }
 
-
+img {
+	z-index: 2;
+}
 
