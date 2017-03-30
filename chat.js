@@ -19,7 +19,8 @@ let chat = document.getElementById('chatMe');
 let btnGitHub = document.getElementById('gitHub');
 let btnGitUt = document.getElementById('git');
 let btnKlick = document.getElementById('klick');
-let bild = document.getElementById('bild');	
+let bild = document.getElementById('bild');
+let zeena = document.getElementById('zeena');
  btnLoggaUt.style.display = "none";
  msm.style.display = "none";
  chat.style.display = "none";
@@ -35,6 +36,7 @@ let bild = document.getElementById('bild');
 	 btnLoggaIn.addEventListener('click', function(){
 
      localStorage.setItem("username", inputName.value);
+	 zeena.innerHTML ="Du är inloggad som " + inputName.value;
 	 inputName.style.display = "none";
 	 efterNamn.style.display = "none";
 	 meddelande.innerHTML = "Välkommen hit " +  inputName.value + " " + efterNamn.value;
@@ -157,7 +159,7 @@ let bild = document.getElementById('bild');
 			bildGit.setAttribute('scr', user.providerData[0].photoURL);
 			bild.appendChild(bildGit);
 			console.log(user);
-		
+		    zeena.innerHTML ="Du är inloggad som " + user.providerData[0].displayName;
 	        msm.style.display = "inline";
 	        chat.style.display = "inline";
 	        btnSend.style.display = "inline";
