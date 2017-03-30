@@ -22,6 +22,7 @@ let btnKlick = document.getElementById('klick');
 let bild = document.getElementById('bild');
 let zeena = document.getElementById('zeena');
  btnLoggaUt.style.display = "none";
+ btnGitUt.style.display = "none";
  msm.style.display = "none";
  chat.style.display = "none";
  btnSend.style.display = "none";
@@ -163,6 +164,7 @@ let zeena = document.getElementById('zeena');
 	        msm.style.display = "inline";
 	        chat.style.display = "inline";
 	        btnSend.style.display = "inline";
+			btnGitUt.style.display = "inline";
 		
 		
 			if(user.providerData[0].email === 'zeena_aywaz@yahoo.com'){
@@ -189,7 +191,7 @@ let zeena = document.getElementById('zeena');
 		   msm.style.display = "none";
 	       chat.style.display = "none";
 	       btnSend.style.display = "none";
-                    })
+           btnGitUt.style.display = "none";        })
                 .catch(function(error) {
 	               console.log('Utloggning misslyckades');
                 });
