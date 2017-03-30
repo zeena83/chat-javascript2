@@ -75,16 +75,16 @@ let zeena = document.getElementById('zeena');
 	
 	
 	btnSend.addEventListener('click', function(){
-	chatMe.innerHTML="";	
-	firebase.database().ref('inputMessage/').push({
-    name: inputName.value,
-	name2: efterNamn.value, 
-	message: comment.value,
-	postDate: day + "/" + month + "/" + year,
-	postTime: hours + ":" + minutes + " " + suffix
+		chatMe.innerHTML="";	
+		firebase.database().ref('inputMessage/').push({
+			name: localStorage.getItem('username'), // inputName.value,
+			name2: '',//efterNamn.value, 
+			message: comment.value,
+			postDate: day + "/" + month + "/" + year,
+			postTime: hours + ":" + minutes + " " + suffix
 
-	})
-		
+		})
+
 		message.value="";
 	});
 	
@@ -165,7 +165,7 @@ let zeena = document.getElementById('zeena');
 	        btnSend.style.display = "inline";
 		
 		
-			if(user.email === 'zeena_aywaz@yahoo.com'){
+			if(user.providerData[0].email === 'zeena_aywaz@yahoo.com'){
 
 			   btnKlick.disabled = false;  // slår på ett avstängt element
 			}
