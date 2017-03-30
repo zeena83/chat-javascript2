@@ -19,7 +19,7 @@ let chat = document.getElementById('chatMe');
 let btnGitHub = document.getElementById('gitHub');
 let btnGitUt = document.getElementById('git');
 let btnKlick = document.getElementById('klick');
-	
+let bild = document.getElementById('bild');	
  btnLoggaUt.style.display = "none";
  msm.style.display = "none";
  chat.style.display = "none";
@@ -151,6 +151,11 @@ let btnKlick = document.getElementById('klick');
 			// Om autentisering lyckas, så finns användarinfo i user
 			let user = result.user;
             localStorage.setItem("username",user.providerData[0].displayName);
+			let bildGit = document.createElement('img');
+			img.style.width = "100px";
+			img.style.height = "100px";
+			img.setAttribute('scr', user.providerData[0].photoURL);
+			bildGit.appendChild(img);
 			console.log(user);
 		
 	        msm.style.display = "inline";
