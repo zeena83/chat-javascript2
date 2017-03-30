@@ -16,10 +16,13 @@ let meddelande = document.getElementById('message');
 let msm = document.getElementById('comment');
 let btnSend = document.getElementById('send');
 let chat = document.getElementById('chatMe');
-let btnGitHub = document.getElementById('gitHub')
-btnLoggaUt.style.display = "none";
+let btnGitHub = document.getElementById('gitHub');
+let btnKlick = document.getElementById('klick');
 	
-	
+ btnLoggaUt.style.display = "none";
+ msm.style.display = "none";
+ chat.style.display = "none";
+	btnSend.style.display = "none";
 	// testa
 	
 //console.log('html element:',inputName, btnLoggaIn, btnLoggaUt); 
@@ -36,6 +39,9 @@ btnLoggaUt.style.display = "none";
 	 meddelande.innerHTML = "Välkommen hit " +  inputName.value + " " + efterNamn.value;
 	 btnLoggaIn.style.display = "none";
 	 btnLoggaUt.style.display = "inline";
+	 msm.style.display = "inline";
+	 chat.style.display = "inline";
+	 btnSend.style.display = "inline";
 	 });
 	
 	
@@ -54,6 +60,9 @@ btnLoggaUt.style.display = "none";
 	 meddelande.innerHTML = "Tack för besöket " + inputName.value + " " + efterNamn.value;
 	 btnLoggaIn.style.display = "inline";
 	 btnLoggaUt.style.display = "none";
+	 msm.style.display = "none";
+	 chat.style.display = "none";
+	 btnSend.style.display = "none";
 	 });
 	
 	
