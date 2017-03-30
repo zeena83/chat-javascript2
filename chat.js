@@ -32,8 +32,8 @@ let btnKlick = document.getElementById('klick');
 	
 	
 	// logga in button
-	
-	 btnLoggaIn.addEventListener('click', function(){
+	  let loggin = function () { 
+
      localStorage.setItem("username", inputName.value);
 	 inputName.style.display = "none";
 	 efterNamn.style.display = "none";
@@ -44,9 +44,9 @@ let btnKlick = document.getElementById('klick');
 	 chat.style.display = "inline";
 	 btnSend.style.display = "inline";
 	 
-	 });
+	 };
 	
-	
+	loginbtn.addEventListener('click', loggin);
 	
 	
 	
@@ -160,7 +160,7 @@ let btnKlick = document.getElementById('klick');
 
 			   btnKlick.disabled = false;  // slår på ett avstängt element
 			}
-	
+	       loggin();
                  
 		});
 		console.log(provider);
