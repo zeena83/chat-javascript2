@@ -17,6 +17,7 @@ let msm = document.getElementById('comment');
 let btnSend = document.getElementById('send');
 let chat = document.getElementById('chatMe');
 let btnGitHub = document.getElementById('gitHub');
+let btnGitUT = document.getElementById('git');
 let btnKlick = document.getElementById('klick');
 	
  btnLoggaUt.style.display = "none";
@@ -166,13 +167,19 @@ let btnKlick = document.getElementById('klick');
 	});
 	
 	
+	// logga ut med github
+	
+	btnGitUt.addEventListener('click', function(){
 	
 	
-	
-	
-	
-	
-	
+	  firebase.auth().signOut().then(function(result) {
+	             window.location.reload();             
+                    })
+                .catch(function(error) {
+	               console.log('Utloggning misslyckades');
+                });
+
+           });
 	
 	
 	
