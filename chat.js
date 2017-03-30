@@ -42,7 +42,7 @@ let btnKlick = document.getElementById('klick');
 	 msm.style.display = "inline";
 	 chat.style.display = "inline";
 	 btnSend.style.display = "inline";
-	 btnGitHub.style.display = "inline";
+	 
 	 });
 	
 	
@@ -64,7 +64,7 @@ let btnKlick = document.getElementById('klick');
 	 msm.style.display = "none";
 	 chat.style.display = "none";
 	 btnSend.style.display = "none";
-	 btnGitHub.style.display = "none";
+	 
 	 });
 	
 	
