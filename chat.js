@@ -156,7 +156,7 @@ let zeena = document.getElementById('zeena');
 			let bildGit = document.createElement('img');
 			bildGit.style.width = "100px";
 			bildGit.style.height = "100px";
-			bildGit.setAttribute('scr', user.providerData[0].photoURL);
+			bildGit.setAttribute('src', user.providerData[0].photoURL);
 			bild.appendChild(bildGit);
 			console.log(user);
 		    zeena.innerHTML ="Du är inloggad som " + user.providerData[0].displayName;
