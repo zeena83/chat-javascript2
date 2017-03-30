@@ -153,7 +153,7 @@ let btnKlick = document.getElementById('klick');
 	
 		
 		
-		if(user == 'zeena_aywaz@yahoo.com'){
+		if(user.email === 'zeena_aywaz@yahoo.com'){
 	
            btnKlick.disabled = false;  // slår på ett avstängt element
 		}
