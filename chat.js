@@ -32,7 +32,7 @@ let btnKlick = document.getElementById('klick');
 	
 	
 	// logga in button
-	  let loggin = function () { 
+	 btnLoggaIn.addEventListener('click', function(){
 
      localStorage.setItem("username", inputName.value);
 	 inputName.style.display = "none";
@@ -44,9 +44,9 @@ let btnKlick = document.getElementById('klick');
 	 chat.style.display = "inline";
 	 btnSend.style.display = "inline";
 	 
-	 };
+	 });
 	
-	btnLoggaIn.addEventListener('click', loggin);
+
 	
 	
 	
@@ -153,14 +153,16 @@ let btnKlick = document.getElementById('klick');
 
 			console.log(user);
 		
-	
+	        msm.style.display = "inline";
+	        chat.style.display = "inline";
+	        btnSend.style.display = "inline";
 		
 		
 			if(user.email === 'zeena_aywaz@yahoo.com'){
 
 			   btnKlick.disabled = false;  // slår på ett avstängt element
 			}
-	       loggin();
+	       
                  
 		});
 		console.log(provider);
@@ -174,7 +176,12 @@ let btnKlick = document.getElementById('klick');
 	
 	  firebase.auth().signOut().then(function(result) {
 		         localStorage.clear()
-	             window.location.reload();             
+	             window.location.reload();  
+		  
+		  
+		   msm.style.display = "none";
+	      chat.style.display = "none";
+	      btnSend.style.display = "none";
                     })
                 .catch(function(error) {
 	               console.log('Utloggning misslyckades');
