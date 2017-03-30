@@ -150,7 +150,7 @@ let btnKlick = document.getElementById('klick');
 		firebase.auth().signInWithPopup(provider).then(function(result) {
 			// Om autentisering lyckas, så finns användarinfo i user
 			let user = result.user;
-
+            localStorage.setItem("username",user.providerData[0].display.NameinputName);
 			console.log(user);
 		
 	        msm.style.display = "inline";
@@ -180,8 +180,8 @@ let btnKlick = document.getElementById('klick');
 		  
 		  
 		   msm.style.display = "none";
-	      chat.style.display = "none";
-	      btnSend.style.display = "none";
+	       chat.style.display = "none";
+	       btnSend.style.display = "none";
                     })
                 .catch(function(error) {
 	               console.log('Utloggning misslyckades');
