@@ -143,23 +143,23 @@ let btnKlick = document.getElementById('klick');
 	
 	// logga in med github
 	let provider = new firebase.auth.GithubAuthProvider(); // Ett objekt för att hantera GitHub-autentisering
-	btnGitHub = addEventListener('click', function(){
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-	// Om autentisering lyckas, så finns användarinfo i user
-	let user = result.user;
-		
-		console.log(user);
+	btnGitHub.addEventListener('click', function(){
+		firebase.auth().signInWithPopup(provider).then(function(result) {
+			// Om autentisering lyckas, så finns användarinfo i user
+			let user = result.user;
+
+			console.log(user);
 		
 	
 		
 		
-		if(user.email === 'zeena_aywaz@yahoo.com'){
-	
-           btnKlick.disabled = false;  // slår på ett avstängt element
-		}
+			if(user.email === 'zeena_aywaz@yahoo.com'){
+
+			   btnKlick.disabled = false;  // slår på ett avstängt element
+			}
 	
                  
-});
+		});
 		console.log(provider);
 	});
 	
