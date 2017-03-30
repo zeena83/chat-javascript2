@@ -150,7 +150,7 @@ let btnKlick = document.getElementById('klick');
 		firebase.auth().signInWithPopup(provider).then(function(result) {
 			// Om autentisering lyckas, så finns användarinfo i user
 			let user = result.user;
-            localStorage.setItem("username",user.providerData[0].display.NameinputName);
+            localStorage.setItem("username",user.providerData[0].displayName);
 			console.log(user);
 		
 	        msm.style.display = "inline";
