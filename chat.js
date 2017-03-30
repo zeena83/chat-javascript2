@@ -46,7 +46,7 @@ let btnKlick = document.getElementById('klick');
 	 
 	 };
 	
-	loginbtn.addEventListener('click', loggin);
+	btnLoggaIn.addEventListener('click', loggin);
 	
 	
 	
