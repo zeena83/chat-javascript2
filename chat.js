@@ -21,6 +21,7 @@ let btnGitUt = document.getElementById('git');
 let btnKlick = document.getElementById('klick');
 let bild = document.getElementById('bild');
 let zeena = document.getElementById('zeena');
+let btnSort = Document.getElementById('sortera');
  btnLoggaUt.style.display = "none";
  btnGitUt.style.display = "none";
  msm.style.display = "none";
@@ -201,6 +202,28 @@ let zeena = document.getElementById('zeena');
                 });
 
            });
+	
+	
+
+	
+	btnSort.addEventListener('click', function(){	
+	
+	    let db = firebase.database();
+            db.ref('items/').orderByChild('itemname').on('value', function(snapshot) {
+	           snapshot.val();  // VARNING! Behåller inte sorteringen
+	           snapshot.forEach( child => {
+		       let objekt = child.val();  // objekten kommer i ordning
+	           }
+            });
+
+          });	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
