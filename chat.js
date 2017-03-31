@@ -32,9 +32,9 @@ let btnDat = document.getElementById('sorteraDat');
  btnSend.style.display = "none";
  btnKlick.disabled = true;
  chatMeNamn.style.display = "none";
-
-	
-	
+ btnSort.style.display = "none";
+ btnMedd.style.display = "none";	
+ btnDat.style.display = "none";	
 	// testa
 	
 //console.log('html element:',inputName, btnLoggaIn, btnLoggaUt); 
@@ -55,6 +55,9 @@ let btnDat = document.getElementById('sorteraDat');
 	 msm.style.display = "inline";
 	 chat.style.display = "inline";
 	 btnSend.style.display = "inline";
+	 btnSort.style.display = "inline";
+     btnMedd.style.display = "inline";	
+     btnDat.style.display = "inline";	
 	 
 	 });
 	
@@ -77,6 +80,9 @@ let btnDat = document.getElementById('sorteraDat');
 	 msm.style.display = "none";
 	 chat.style.display = "none";
 	 btnSend.style.display = "none";
+	 btnSort.style.display = "none";
+     btnMedd.style.display = "none";	
+     btnDat.style.display = "none";	
 	 
 	 });
 	
@@ -180,7 +186,9 @@ let btnDat = document.getElementById('sorteraDat');
 	        chat.style.display = "inline";
 	        btnSend.style.display = "inline";
 			btnGitUt.style.display = "inline";
-		
+		    btnSort.style.display = "inline";
+            btnMedd.style.display = "inline";	
+            btnDat.style.display = "inline";	
 		
 			if(user.providerData[0].email === 'zeena_aywaz@yahoo.com'){
 
@@ -206,7 +214,12 @@ let btnDat = document.getElementById('sorteraDat');
 		   msm.style.display = "none";
 	       chat.style.display = "none";
 	       btnSend.style.display = "none";
-           btnGitUt.style.display = "none";        })
+           btnGitUt.style.display = "none";       
+	       btnSort.style.display = "none";
+           btnMedd.style.display = "none";	
+           btnDat.style.display = "none";	
+	  
+	  })
                 .catch(function(error) {
 	               console.log('Utloggning misslyckades');
                 });
