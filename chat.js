@@ -23,6 +23,8 @@ let bild = document.getElementById('bild');
 let zeena = document.getElementById('zeena');
 let btnSort = document.getElementById('sortera');
 let chatMeNamn = document.getElementById('chatMeNamn');
+let btnMedd = document.getElementById('sorteraMedd');
+let btnDat = document.getElementById('sorteraDat');
  btnLoggaUt.style.display = "none";
  btnGitUt.style.display = "none";
  msm.style.display = "none";
@@ -79,7 +81,7 @@ let chatMeNamn = document.getElementById('chatMeNamn');
 	 });
 	
 	
-	//send message
+	//send message,,firebase
 	
 	
 	btnSend.addEventListener('click', function(){
@@ -155,20 +157,26 @@ let chatMeNamn = document.getElementById('chatMeNamn');
 	
 	
 	// logga in med github
+	
+	
 	let provider = new firebase.auth.GithubAuthProvider(); // Ett objekt för att hantera GitHub-autentisering
 	btnGitHub.addEventListener('click', function(){
 		firebase.auth().signInWithPopup(provider).then(function(result) {
 			// Om autentisering lyckas, så finns användarinfo i user
 			let user = result.user;
-            localStorage.setItem("username",user.providerData[0].displayName);
-			let bildGit = document.createElement('img');
+            localStorage.setItem("username",user.providerData[0].displayName);  //för att visa namn i meddelande
+			
+			let bildGit = document.createElement('img');  // för att visa bilden 
 			bildGit.style.width = "100px";
 			bildGit.style.height = "100px";
 			bildGit.setAttribute('src', user.providerData[0].photoURL);
 			bild.appendChild(bildGit);
 			console.log(user);
-		    zeena.innerHTML ="Du är inloggad som " + user.providerData[0].displayName;
-	        msm.style.display = "inline";
+		    
+			zeena.innerHTML ="Du är inloggad som " + user.providerData[0].displayName;
+	        
+			
+			msm.style.display = "inline";
 	        chat.style.display = "inline";
 	        btnSend.style.display = "inline";
 			btnGitUt.style.display = "inline";
@@ -211,7 +219,7 @@ let chatMeNamn = document.getElementById('chatMeNamn');
 	
 	
 	
-	// sortering
+	// sortering efter namn
 	
 	btnSort.addEventListener('click', function(){	
 	
@@ -226,13 +234,9 @@ let chatMeNamn = document.getElementById('chatMeNamn');
 				    chat.style.display = "none";			   				   
 
 				   let li = document.createElement('li');
-		 //console.log('data', dataobject[x]);
+		
 		 li.innerHTML = objekt.name + " " + objekt.name2 + " : " + objekt.message + " ," + objekt.postDate + "," + objekt.postTime;
 		 
-		 
-		 
-		 
-		 // För att få meddelanden att hamna längst up
 		 chatMeNamn.appendChild(li);
 	           })
 			   
@@ -241,6 +245,40 @@ let chatMeNamn = document.getElementById('chatMeNamn');
             });
 
           });	
+	
+	
+	
+	
+	
+	
+	// sortering efter meddelande
+	
+	btnSort.addEventListener('click', function(){	
+	
+	    let db = firebase.database();
+            db.ref('inputMessage/').orderByChild('message').on('value', function(snapshot) {
+	           snapshot.val();  // VARNING! Behåller inte sorteringen
+	           snapshot.forEach( child => {
+		       let objekt = child.val();// objekten kommer i ordning
+				   console.log (child.val());
+				   
+				    chatMeNamn.style.display ="inline";
+				    chat.style.display = "none";			   				   
+
+				   let li = document.createElement('li');
+		
+		 li.innerHTML = objekt.name + " " + objekt.name2 + " : " + objekt.message + " ," + objekt.postDate + "," + objekt.postTime;
+		 
+		 chatMeNamn.appendChild(li);
+	           })
+			   
+			   
+			 
+            });
+
+          });	
+	
+	
 	
 	
 	
