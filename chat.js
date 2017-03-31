@@ -217,7 +217,8 @@ let btnSort = document.getElementById('sortera');
             db.ref('inputMessage/').orderByChild('name').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
 	           snapshot.forEach( child => {
-		       let objekt = child.val();  // objekten kommer i ordning
+		       let objekt = child.val();// objekten kommer i ordning
+				   console.log (child.val());
 	           })
             });
 
