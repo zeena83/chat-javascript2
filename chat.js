@@ -213,7 +213,7 @@ let btnSort = Document.getElementById('sortera');
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
 	           snapshot.forEach( child => {
 		       let objekt = child.val();  // objekten kommer i ordning
-	           }
+	           })
             });
 
           });	
