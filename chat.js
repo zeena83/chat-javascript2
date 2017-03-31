@@ -22,12 +22,14 @@ let btnKlick = document.getElementById('klick');
 let bild = document.getElementById('bild');
 let zeena = document.getElementById('zeena');
 let btnSort = document.getElementById('sortera');
+let chatMeNamn = document.getElementById('chatMeNamn');
  btnLoggaUt.style.display = "none";
  btnGitUt.style.display = "none";
  msm.style.display = "none";
  chat.style.display = "none";
  btnSend.style.display = "none";
  btnKlick.disabled = true;
+ chatMeNamn.style.display ="none";
 
 	
 	
@@ -95,7 +97,7 @@ let btnSort = document.getElementById('sortera');
 	});
 	
 	
-	/*//visa innehållet i database
+	//visa innehållet i database
 	
 	firebase.database().ref('inputMessage/').on('value', function(snapshot){
 	 let dataobject = snapshot.val();
@@ -115,7 +117,7 @@ let btnSort = document.getElementById('sortera');
 	
 	//console.log(snapshot.val());
 	});
-	*/
+	
 	
 	
 	// date 
@@ -219,16 +221,23 @@ let btnSort = document.getElementById('sortera');
 	           snapshot.forEach( child => {
 		       let objekt = child.val();// objekten kommer i ordning
 				   console.log (child.val());
+				   
+				    chatMeNamn.style.display ="inline";
+				    chat.style.display = "none";			   				   
+
+				   let li = document.createElement('li');
+		 //console.log('data', dataobject[x]);
+		 li.innerHTML = objekt[0].name + " " + objekt[0].name2 + " : " + objekt[0].message + " ," + objekt[0].postDate + "," + objekt[0].postTime;
+		 
+		 
+		 
+		 
+		 // För att få meddelanden att hamna längst up
+		 chatMeNamn.appendChild(li);
 	           })
 			   
 			   
-			   for(let x in objekt){
-		 let li = document.createElement('li');
-		 //console.log('data', dataobject[x]);
-		 li.innerHTML = objekt[x].name + " " + objekt[x].name2 + " : " + objekt[x].message + " ," + objekt[x].postDate + "," + objekt[x].postTime;
-				   
-				   
-			   }
+			 
             });
 
           });	
