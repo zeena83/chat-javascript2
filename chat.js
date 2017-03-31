@@ -226,7 +226,7 @@ let btnSort = document.getElementById('sortera');
 		 let li = document.createElement('li');
 		 //console.log('data', dataobject[x]);
 		 li.innerHTML = db[x].name + " " + db[x].name2 + " : " + db[x].message + " ," + db[x].postDate + "," + db[x].postTime;
-            });
+            };
 
           });	
 	
