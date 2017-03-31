@@ -256,7 +256,7 @@ let btnDat = document.getElementById('sorteraDat');
 	btnSort.addEventListener('click', function(){	
 	
 	    let db = firebase.database();
-            db.ref('inputMessage/').orderByChild('message').on('value', function(snapshot) {
+            db.ref('inputMessage/').orderByChild('comment').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
 	           snapshot.forEach( child => {
 		       let objekt = child.val();// objekten kommer i ordning
