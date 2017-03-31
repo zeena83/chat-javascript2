@@ -214,7 +214,7 @@ let btnDat = document.getElementById('sorteraDat');
 	  firebase.auth().signOut().then(function(result) {
 		         localStorage.clear()
 	             window.location.reload();  
-		  
+		  zeena.innerHTML ="Tack för besöket!" + user.providerData[0].displayName;
 		  
 		   msm.style.display = "none";
 	       chat.style.display = "none";
