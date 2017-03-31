@@ -26,6 +26,10 @@ let zeena = document.getElementById('zeena');
  msm.style.display = "none";
  chat.style.display = "none";
  btnSend.style.display = "none";
+ btnKlick.disabled = true;
+
+	
+	
 	// testa
 	
 //console.log('html element:',inputName, btnLoggaIn, btnLoggaUt); 
