@@ -256,7 +256,7 @@ let btnDat = document.getElementById('sorteraDat');
 	btnSort.addEventListener('click', function(){	
 	
 	    let db = firebase.database();
-            db.ref('inputMessage/').orderByChild('comment').on('value', function(snapshot) {
+            db.ref('inputMessage/').orderByChild('chatMe').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
 	           snapshot.forEach( child => {
 		       let objekt = child.val();// objekten kommer i ordning
@@ -277,6 +277,40 @@ let btnDat = document.getElementById('sorteraDat');
             });
 
           });	
+	
+	
+	
+	
+	
+	
+	
+	// sortering efter datum
+	
+	btnSort.addEventListener('click', function(){	
+	
+	    let db = firebase.database();
+            db.ref('inputMessage/').orderByChild('postDate').on('value', function(snapshot) {
+	           snapshot.val();  // VARNING! Behåller inte sorteringen
+	           snapshot.forEach( child => {
+		       let objekt = child.val();// objekten kommer i ordning
+				   console.log (child.val());
+				   
+				    chatMeNamn.style.display ="inline";
+				    chat.style.display = "none";			   				   
+
+				   let li = document.createElement('li');
+		
+		 li.innerHTML = objekt.name + " " + objekt.name2 + " : " + objekt.message + " ," + objekt.postDate + "," + objekt.postTime;
+		 
+		 chatMeNamn.appendChild(li);
+	           })
+			   
+			   
+			 
+            });
+
+          });	
+	
 	
 	
 	
