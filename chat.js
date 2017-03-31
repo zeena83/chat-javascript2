@@ -57,7 +57,8 @@ let btnDat = document.getElementById('sorteraDat');
 	 btnSend.style.display = "inline";
 	 btnSort.style.display = "inline";
      btnMedd.style.display = "inline";	
-     btnDat.style.display = "inline";	
+     btnDat.style.display = "inline";
+	 btnGitHub.style.display ="none";
 	 
 	 });
 	
