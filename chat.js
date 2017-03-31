@@ -227,7 +227,7 @@ let chatMeNamn = document.getElementById('chatMeNamn');
 
 				   let li = document.createElement('li');
 		 //console.log('data', dataobject[x]);
-		 li.innerHTML = objekt[0].name + " " + objekt[0].name2 + " : " + objekt[0].message + " ," + objekt[0].postDate + "," + objekt[0].postTime;
+		 li.innerHTML = objekt.name + " " + objekt.name2 + " : " + objekt.message + " ," + objekt.postDate + "," + objekt.postTime;
 		 
 		 
 		 
