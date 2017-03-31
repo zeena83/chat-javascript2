@@ -95,7 +95,7 @@ let btnSort = document.getElementById('sortera');
 	});
 	
 	
-	//visa innehållet i database
+	/*//visa innehållet i database
 	
 	firebase.database().ref('inputMessage/').on('value', function(snapshot){
 	 let dataobject = snapshot.val();
@@ -115,7 +115,7 @@ let btnSort = document.getElementById('sortera');
 	
 	//console.log(snapshot.val());
 	});
-	
+	*/
 	
 	
 	// date 
@@ -220,6 +220,12 @@ let btnSort = document.getElementById('sortera');
 		       let objekt = child.val();// objekten kommer i ordning
 				   console.log (child.val());
 	           })
+			   
+			   
+			   for(let x in db){
+		 let li = document.createElement('li');
+		 //console.log('data', dataobject[x]);
+		 li.innerHTML = db[x].name + " " + db[x].name2 + " : " + db[x].message + " ," + db[x].postDate + "," + db[x].postTime;
             });
 
           });	
