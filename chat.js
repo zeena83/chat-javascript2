@@ -222,10 +222,10 @@ let btnSort = document.getElementById('sortera');
 	           })
 			   
 			   
-			   for(let x in db){
+			   for(let x in objekt){
 		 let li = document.createElement('li');
 		 //console.log('data', dataobject[x]);
-		 li.innerHTML = db[x].name + " " + db[x].name2 + " : " + db[x].message + " ," + db[x].postDate + "," + db[x].postTime;
+		 li.innerHTML = objekt[x].name + " " + objekt[x].name2 + " : " + objekt[x].message + " ," + objekt[x].postDate + "," + objekt[x].postTime;
 				   
 				   
 			   }
