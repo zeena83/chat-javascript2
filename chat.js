@@ -29,7 +29,7 @@ let chatMeNamn = document.getElementById('chatMeNamn');
  chat.style.display = "none";
  btnSend.style.display = "none";
  btnKlick.disabled = true;
- chatMeNamn.style.display ="none";
+ chatMeNamn.style.display = "none";
 
 	
 	
