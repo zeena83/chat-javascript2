@@ -192,7 +192,9 @@ let btnDat = document.getElementById('sorteraDat');
 		    btnSort.style.display = "inline";
             btnMedd.style.display = "inline";	
             btnDat.style.display = "inline";	
-		
+		    inputName.style.display ="none";
+			efterNamn.style.display ="none";
+			
 			if(user.providerData[0].email === 'zeena_aywaz@yahoo.com'){
 
 			   btnKlick.disabled = false;  // slår på ett avstängt element
