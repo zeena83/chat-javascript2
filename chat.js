@@ -343,16 +343,24 @@ let textLabel = document.getElementById('label');
 	// limitToFirst(limit) OR limitToLast(limit)
 	
 	btnLimit.addEventListener('keypress',function(){
-		        let firstLimitRef = firebase.database().ref('inputMessage/').limitToFirst(3);
-		          firstLimitRef.on('value', function(snapshot) {
-	                snapshot.val();  
-	            console.log(snapshot.val());
+		                          let firstLimitRef = firebase.database().ref('inputMessage/').limitToFirst(3);
+		                          let lastLimitRef = firebase.database().ref('inputMessage/').limitToLast(3);
+		                          firstLimitRef.on('value', function(snapshot) {
+	                                                 snapshot.val();  
+	                                                 console.log(snapshot.val());
 		      
-	})
+	                                                   }) 
 
-	});
+	                                        });
 	
+                                     lastLimitRef.on('value', function(snapshot) {
+	                                                 snapshot.val();  
+	                                                 console.log(snapshot.val());
+		      
+	                                                   }) 
 
+	                                        });
+	
 	
 	
 	
