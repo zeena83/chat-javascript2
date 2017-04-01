@@ -26,7 +26,7 @@ let chatMeNamn = document.getElementById('chatMeNamn');
 let btnMedd = document.getElementById('sorteraMedd');
 let btnDat = document.getElementById('sorteraDat');
 let btnLimit = document.getElementById("ex2");
-	
+let textLabel = document.getElementById('label');	
  btnLoggaUt.style.display = "none";
  btnGitUt.style.display = "none";
  msm.style.display = "none";
@@ -38,6 +38,7 @@ let btnLimit = document.getElementById("ex2");
  btnMedd.style.display = "none";	
  btnDat.style.display = "none";	
  btnLimit.style.display = "none";
+ textLabel.style.display = "none";
 	// testa
 	
 //console.log('html element:',inputName, btnLoggaIn, btnLoggaUt); 
@@ -63,6 +64,7 @@ let btnLimit = document.getElementById("ex2");
      btnDat.style.display = "inline";
 	 btnGitHub.style.display ="none";
 	 btnLimit.style.display = "inline";
+	 textLabel.style.display = "inline";
 	 });
 	
 
@@ -88,6 +90,7 @@ let btnLimit = document.getElementById("ex2");
      btnMedd.style.display = "none";	
      btnDat.style.display = "none";	
 	 btnLimit.style.display = "none";
+	 textLabel.style.display = "none";
 	 });
 	
 	
@@ -198,6 +201,8 @@ let btnLimit = document.getElementById("ex2");
 		    inputName.style.display ="none";
 			efterNamn.style.display ="none";
 			btnLimit.style.display = "inline";
+			textLabel.style.display = "inline";
+			
 			if(user.providerData[0].email === 'zeena_aywaz@yahoo.com'){
 
 			   btnKlick.disabled = false;  // slår på ett avstängt element
@@ -227,6 +232,7 @@ let btnLimit = document.getElementById("ex2");
            btnMedd.style.display = "none";	
            btnDat.style.display = "none";	
 	       btnLimit.style.display = "none";
+		   textLabel.style.display = "none";
 	  })
                 .catch(function(error) {
 	               console.log('Utloggning misslyckades');
