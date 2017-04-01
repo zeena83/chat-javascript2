@@ -344,14 +344,21 @@ let textLabel = document.getElementById('label');
 	
 	btnLimit.addEventListener('keypress',function(){
 		                     
-		                          let lastLimitRef = firebase.database().ref('inputMessage/').limitToLast(3);
-		                          lastLimitRef.on('value', function(snapshot) {
+		  let lastLimitRef = firebase.database().ref('inputMessage/').limitToLast(3);
+		      lastLimitRef.on('value', function(snapshot) {
 	                                                 snapshot.val();  
 	                                                 console.log(snapshot.val());
+				  
+				  
+				   let li = document.createElement('li');
+		
+		              li.innerHTML = lastLimitRef.name + " " + lastLimitRef.name2 + " : " + lastLimitRef.message + " ," + lastLimitRef.postDate + "," + lastLimitRef.postTime;
+		 
+		              chatMeNamn.appendChild(li);
 		      
 	                                                   }) 
 
-	                                        });
+	                            });
 	
                                      
 	
