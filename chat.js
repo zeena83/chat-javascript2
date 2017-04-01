@@ -350,17 +350,10 @@ let textLabel = document.getElementById('label');
 	                                                 console.log(snapshot.val());
 				  
 				  
-		    name: localStorage.getItem('username'), // inputName.value,
-	
-			message: comment.value,
-			postDate: day + "/" + month + "/" + year,
-			postTime: hours + ":" + minutes + " " + suffix
-				  
-				  
-	                                                   }) 
+		   
+				                        }) 
 
-	                            });
-	
+	                     });
                                      
 	
 	
