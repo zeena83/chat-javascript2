@@ -343,16 +343,16 @@ let textLabel = document.getElementById('label');
 	// limitToFirst(limit) OR limitToLast(limit)
 	
 	btnLimit.addEventListener('keypress',function(){
-		        let limit = firebase.database();
-                limit.ref('inputMessage/').limitToFirst(3).on('value', function(snapshot) {
-	            snapshot.val();  // VARNING! Behåller inte sorteringen
-	            snapshot.forEach( child => {
-		       let objekt = child.val();  // objekten kommer i ordning
+		        let firstLimitRef = firebase.database().ref('inputMessage/').limitToFirst(3);
+		          firstLimitRef.on('value', function(snapshot) {
+	                snapshot.val();  
+	            console.log(snapshot.val());
+		      
 	})
 
 	});
 	
-	 });
+
 	
 	
 	
