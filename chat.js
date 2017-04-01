@@ -354,7 +354,7 @@ let textLabel = document.getElementById('label');
 		
 		              li.innerHTML = lastLimitRef.name + " " + lastLimitRef.name2 + " : " + lastLimitRef.message + " ," + lastLimitRef.postDate + "," + lastLimitRef.postTime;
 		 
-		              chatM.appendChild(li);
+		              chat.appendChild(li);
 		      
 	                                                   }) 
 
