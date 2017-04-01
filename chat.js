@@ -350,12 +350,13 @@ let textLabel = document.getElementById('label');
 	                                                 console.log(snapshot.val());
 				  
 				  
-				   let li = document.createElement('li');
-		
-		              li.innerHTML = lastLimitRef.name + " " + lastLimitRef.name2 + " : " + lastLimitRef.message + " ," + lastLimitRef.postDate + "," + lastLimitRef.postTime;
-		 
-		              chat.appendChild(li);
-		      
+		    name: localStorage.getItem('username'), // inputName.value,
+			name2: '',//efterNamn.value, 
+			message: comment.value,
+			postDate: day + "/" + month + "/" + year,
+			postTime: hours + ":" + minutes + " " + suffix
+				  
+				  
 	                                                   }) 
 
 	                            });
