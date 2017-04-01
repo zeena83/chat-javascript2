@@ -25,6 +25,8 @@ let btnSort = document.getElementById('sortera');
 let chatMeNamn = document.getElementById('chatMeNamn');
 let btnMedd = document.getElementById('sorteraMedd');
 let btnDat = document.getElementById('sorteraDat');
+let btnLimit = document.getElementById("ex2");
+	
  btnLoggaUt.style.display = "none";
  btnGitUt.style.display = "none";
  msm.style.display = "none";
@@ -35,6 +37,7 @@ let btnDat = document.getElementById('sorteraDat');
  btnSort.style.display = "none";
  btnMedd.style.display = "none";	
  btnDat.style.display = "none";	
+ btnLimit.style.display = "none";
 	// testa
 	
 //console.log('html element:',inputName, btnLoggaIn, btnLoggaUt); 
@@ -59,7 +62,7 @@ let btnDat = document.getElementById('sorteraDat');
      btnMedd.style.display = "inline";	
      btnDat.style.display = "inline";
 	 btnGitHub.style.display ="none";
-	 
+	 btnLimit.style.display = "inline";
 	 });
 	
 
@@ -84,7 +87,7 @@ let btnDat = document.getElementById('sorteraDat');
 	 btnSort.style.display = "none";
      btnMedd.style.display = "none";	
      btnDat.style.display = "none";	
-	 
+	 btnLimit.style.display = "none";
 	 });
 	
 	
@@ -194,7 +197,7 @@ let btnDat = document.getElementById('sorteraDat');
             btnDat.style.display = "inline";	
 		    inputName.style.display ="none";
 			efterNamn.style.display ="none";
-			
+			btnLimit.style.display = "inline";
 			if(user.providerData[0].email === 'zeena_aywaz@yahoo.com'){
 
 			   btnKlick.disabled = false;  // slår på ett avstängt element
@@ -223,7 +226,7 @@ let btnDat = document.getElementById('sorteraDat');
 	       btnSort.style.display = "none";
            btnMedd.style.display = "none";	
            btnDat.style.display = "none";	
-	  
+	       btnLimit.style.display = "none";
 	  })
                 .catch(function(error) {
 	               console.log('Utloggning misslyckades');
@@ -331,9 +334,17 @@ let btnDat = document.getElementById('sorteraDat');
 	
 	
 	
+	// limitToFirst(limit) OR limitToLast(limit)
 	
-	
-	
+	btnLimit.addEventListener('keypress',function(){
+		        let db = firebase.database();
+                db.ref('inputMessage/').limitToFirst(3).on('value', function(snapshot) {
+	            snapshot.val();  // VARNING! Behåller inte sorteringen
+	            snapshot.forEach( child => {
+		       let objekt = child.val();  // objekten kommer i ordning
+	}
+});
+	});
 	
 	
 	
