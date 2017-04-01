@@ -337,16 +337,16 @@ let btnLimit = document.getElementById("ex2");
 	// limitToFirst(limit) OR limitToLast(limit)
 	
 	btnLimit.addEventListener('keypress',function(){
-		        let db = firebase.database();
-                db.ref('inputMessage/').limitToFirst(3).on('value', function(snapshot) {
+		        let limit = firebase.database();
+                limit.ref('inputMessage/').limitToFirst(3).on('value', function(snapshot) {
 	            snapshot.val();  // VARNING! Behåller inte sorteringen
 	            snapshot.forEach( child => {
 		       let objekt = child.val();  // objekten kommer i ordning
-	}
-});
+	})
+
 	});
 	
-	
+	 });
 	
 	
 	
