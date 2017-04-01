@@ -341,7 +341,7 @@ let textLabel = document.getElementById('label');
 	
 	
 	// limitToFirst(limit) OR limitToLast(limit)
-	
+	 
 	btnLimit.addEventListener('keypress',function(){
 		                     
 		  let lastLimitRef = firebase.database().ref('inputMessage/').limitToLast(3);
@@ -351,7 +351,7 @@ let textLabel = document.getElementById('label');
 				  
 				  
 		    name: localStorage.getItem('username'), // inputName.value,
-			name2: '',//efterNamn.value, 
+	
 			message: comment.value,
 			postDate: day + "/" + month + "/" + year,
 			postTime: hours + ":" + minutes + " " + suffix
