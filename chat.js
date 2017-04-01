@@ -351,7 +351,7 @@ let textLabel = document.getElementById('label');
 		      
 	                                                   }) 
 
-	                                        });
+	                                        
 	
                                      lastLimitRef.on('value', function(snapshot) {
 	                                                 snapshot.val();  
@@ -361,7 +361,7 @@ let textLabel = document.getElementById('label');
 
 	                                        });
 	
-	
+	                                   });
 	
 	
 	
