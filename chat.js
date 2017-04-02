@@ -280,13 +280,13 @@ let textLabel = document.getElementById('label');
 	
 	// sortering efter meddelande
 	
-	btnSort.addEventListener('click', function(){	
+	btnMedd.addEventListener('click', function(){	
 	
-	    let db = firebase.database();
-            db.ref('inputMessage/').orderByChild('chatMe').on('value', function(snapshot) {
+	    let dbM = firebase.database();
+            dbM.ref('inputMessage/').orderByChild('message').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
 	           snapshot.forEach( child => {
-		       let objekt = child.val();// objekten kommer i ordning
+		       let objektM = child.val();// objekten kommer i ordning
 				   console.log (child.val());
 				   
 				    chatMeNamn.style.display ="inline";
@@ -294,7 +294,7 @@ let textLabel = document.getElementById('label');
 
 				   let li = document.createElement('li');
 		
-		 li.innerHTML = objekt.name + " " + objekt.name2 + " : " + objekt.message + " ," + objekt.postDate + "," + objekt.postTime;
+		 li.innerHTML = objektM.name + " " + objektM.message + " ," + objektM.postDate + "," + objektM.postTime;
 		 
 		 chatMeNamn.appendChild(li);
 	           })
@@ -313,13 +313,13 @@ let textLabel = document.getElementById('label');
 	
 	// sortering efter datum
 	
-	btnSort.addEventListener('click', function(){	
+	btnDat.addEventListener('click', function(){	
 	
-	    let db = firebase.database();
-            db.ref('inputMessage/').orderByChild('postDate').on('value', function(snapshot) {
+	    let dbD = firebase.database();
+            dbD.ref('inputMessage/').orderByChild('postDate').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
 	           snapshot.forEach( child => {
-		       let objekt = child.val();// objekten kommer i ordning
+		       let objektD = child.val();// objekten kommer i ordning
 				   console.log (child.val());
 				   
 				    chatMeNamn.style.display ="inline";
@@ -327,7 +327,7 @@ let textLabel = document.getElementById('label');
 
 				   let li = document.createElement('li');
 		
-		 li.innerHTML = objekt.name + " " + objekt.name2 + " : " + objekt.message + " ," + objekt.postDate + "," + objekt.postTime;
+		 li.innerHTML = objektD.name + " " + objektD.name2 + " : " + objektD.message + " ," + objektD.postDate + "," + objektD.postTime;
 		 
 		 chatMeNamn.appendChild(li);
 	           })
