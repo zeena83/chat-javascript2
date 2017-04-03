@@ -350,13 +350,13 @@ let textLabel = document.getElementById('label');
 	                                                 console.log(snapshot.val());
 				  
 				  
-				  let objektlit = child.val();// objekten kommer i ordning
+				 /*' let objektlit = child.val();// objekten kommer i ordning
 				   console.log (child.val());
 				   
 				    chatMeNamn.style.display ="inline";
 				    chat.style.display = "none";			   				   
 
-				  /* let li = document.createElement('li');
+				  let li = document.createElement('li');
 		
 		 li.innerHTML = objektlit.name + " " + objektlit.name2 + " : " + objektlit.message + " ," + objektlit.postDate + "," + objektlit.postTime;
 		 
