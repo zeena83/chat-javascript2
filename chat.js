@@ -278,7 +278,7 @@ let textLabel = document.getElementById('label');
 	
 	
 	
-	// sortering efter meddelande
+	/*// sortering efter meddelande
 	
 	btnMedd.addEventListener('click', function(){	
 	
@@ -338,7 +338,7 @@ let textLabel = document.getElementById('label');
 
           });	
 	
-	
+	*/
 	
 	// limitToFirst(limit) OR limitToLast(limit)
 	 
@@ -356,12 +356,12 @@ let textLabel = document.getElementById('label');
 				    chatMeNamn.style.display ="inline";
 				    chat.style.display = "none";			   				   
 
-				   let li = document.createElement('li');
+				  /* let li = document.createElement('li');
 		
 		 li.innerHTML = objektlit.name + " " + objektlit.name2 + " : " + objektlit.message + " ," + objektlit.postDate + "," + objektlit.postTime;
 		 
 		 chatMeNamn.appendChild(li);
-				  
+				  */
 				  
 		   
 				                        }) 
