@@ -358,8 +358,9 @@ let textLabel = document.getElementById('label');
 			let dataobjectLimit = snapshot.val();
 			for(let i in dataobjectLimit){
 				console.log('dataobjekt',i);
+				let x = dataobjectLimit[i];
 				let li = document.createElement('li');
-				li.innerHTML = i.name + " " + i.name2 + " : " + i.message + " ," + i.postDate + "," + i.postTime;
+				li.innerHTML = x.name + " " + x.name2 + " : " + x.message + " ," + x.postDate + "," + x.postTime;
 
 				chatMeNamn.appendChild(li);
 			}
