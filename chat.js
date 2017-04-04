@@ -343,8 +343,9 @@ let textLabel = document.getElementById('label');
 	// limitToLast(limit)
 	 
 	btnLimit.addEventListener('keypress',function(){
-		   chatMeNamn.innerHTML = "" ;                 
-		let lastLimitRef = firebase.database().ref('inputMessage/').limitToLast(3);
+		   chatMeNamn.innerHTML = "" ;   
+		
+		let lastLimitRef = firebase.database().ref('inputMessage/').limitToLast(Nummber(btnLimit.value));
 		lastLimitRef.once('value', function(snapshot) {
 			//snapshot.val();
 			//console.log(snapshot.val());
