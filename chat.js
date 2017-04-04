@@ -346,9 +346,39 @@ let textLabel = document.getElementById('label');
 		   
 	   chatMeNamn.style.display ="inline";
 		chat.style.display = "none";
-		chatMeNamn.innerHTML = "" ;   
-		let xy = Number(btnLimit.value);
-		console.log(xy);
+		chatMeNamn.innerHTML = "" ;  
+		
+		 let lastLimitRef = firebase.database().ref('inputMessage/').limitToLast(3);
+              lastLimitRef.on('value', function(snapshot) {
+                                                     snapshot.val();  
+                                                     console.log(snapshot.val());
+                
+                     
+			let dataobjectLimit = snapshot.val();
+			 console.log(snapshot.val());
+			for(let i in dataobjectLimit){
+				console.log('dataobjekt',i);
+				let x = dataobjectLimit[i];
+				let li = document.createElement('li');
+				li.innerHTML = x.name + " " + x.name2 + " : " + x.message + " ," + x.postDate + "," + x.postTime;
+
+				chatMeNamn.appendChild(li);
+			}
+           
+                                        }) 
+			  
+			  });//button event
+
+		
+	
+	
+	
+	
+	
+	
+	
+	/*let xy = Number(btnLimit.value);
+		//console.log(xy);
 		let dblimit = firebase.database();
 		dblimit.ref('inputMessage/').limitToFirst(xy).once('value', function(snapshot){
 	    let dataobject = snapshot.val();
@@ -356,10 +386,10 @@ let textLabel = document.getElementById('label');
 		 let li = document.createElement('li');
 		 //console.log('data', dataobject[x]);
 		 li.innerHTML = dataobject[x].name + " " + dataobject[x].name2 + " : " + dataobject[x].message + " ," + dataobject[x].postDate + "," + dataobject[x].postTime;
-		 chatMeNamn.appendChild(li);
+		 chatMeNamn.appendChild(li);*/
 		 
-	 }//for loop
-	});//firebase
+	 //for loop
+	//firebase
 	
 	
 	
@@ -382,7 +412,7 @@ let textLabel = document.getElementById('label');
 			}*/
 
 
-		});//button event
+		
 
                          
 	
