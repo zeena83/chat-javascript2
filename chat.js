@@ -350,7 +350,9 @@ let textLabel = document.getElementById('label');
 	                                                 console.log(snapshot.val());
 				  
 				  
-				 /*' let objektlit = child.val();// objekten kommer i ordning
+				
+				  
+				  let objektlit = child.val();// objekten kommer i ordning
 				   console.log (child.val());
 				   
 				    chatMeNamn.style.display ="inline";
@@ -358,10 +360,10 @@ let textLabel = document.getElementById('label');
 
 				  let li = document.createElement('li');
 		
-		 li.innerHTML = objektlit.name + " " + objektlit.name2 + " : " + objektlit.message + " ," + objektlit.postDate + "," + objektlit.postTime;
+		 li.innerHTML = snapshot.name + " " + snapshot.name2 + " : " + snapshot.message + " ," + snapshot.postDate + "," + snapshot.postTime;
 		 
 		 chatMeNamn.appendChild(li);
-				  */
+				  
 				  
 		   
 				                        }) 
