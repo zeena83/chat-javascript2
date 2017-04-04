@@ -343,7 +343,7 @@ let textLabel = document.getElementById('label');
 	// limitToLast(limit)
 	 
 	btnLimit.addEventListener('keypress',function(){
-		                     
+		   chatMeNamn.innerHTML = "" ;                 
 		let lastLimitRef = firebase.database().ref('inputMessage/').limitToLast(3);
 		lastLimitRef.on('value', function(snapshot) {
 			//snapshot.val();
@@ -353,7 +353,7 @@ let textLabel = document.getElementById('label');
 			chatMeNamn.style.display ="inline";
 			chat.style.display = "none";
 
-
+            
 
 			let dataobjectLimit = snapshot.val();
 			for(let i in dataobjectLimit){
