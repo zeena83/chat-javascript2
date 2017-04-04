@@ -23,8 +23,6 @@ let bild = document.getElementById('bild');
 let zeena = document.getElementById('zeena');
 let btnSort = document.getElementById('sortera');
 let chatMeNamn = document.getElementById('chatMeNamn');
-let btnMedd = document.getElementById('sorteraMedd');
-let btnDat = document.getElementById('sorteraDat');
 let btnLimit = document.getElementById("ex2");
 let textLabel = document.getElementById('label');	
  btnLoggaUt.style.display = "none";
@@ -35,8 +33,6 @@ let textLabel = document.getElementById('label');
  btnKlick.disabled = true;
  chatMeNamn.style.display = "none";
  btnSort.style.display = "none";
- btnMedd.style.display = "none";	
- btnDat.style.display = "none";	
  btnLimit.style.display = "none";
  textLabel.style.display = "none";
 	// testa
@@ -60,8 +56,6 @@ let textLabel = document.getElementById('label');
 	 chat.style.display = "inline";
 	 btnSend.style.display = "inline";
 	 btnSort.style.display = "inline";
-     btnMedd.style.display = "inline";	
-     btnDat.style.display = "inline";
 	 btnGitHub.style.display ="none";
 	 btnLimit.style.display = "inline";
 	 textLabel.style.display = "inline";
@@ -87,8 +81,6 @@ let textLabel = document.getElementById('label');
 	 chat.style.display = "none";
 	 btnSend.style.display = "none";
 	 btnSort.style.display = "none";
-     btnMedd.style.display = "none";	
-     btnDat.style.display = "none";	
 	 btnLimit.style.display = "none";
 	 textLabel.style.display = "none";
 	 });
@@ -196,8 +188,6 @@ let textLabel = document.getElementById('label');
 			btnLoggaIn.style.display = "none";
 			btnGitHub.style.display ="none";
 		    btnSort.style.display = "inline";
-            btnMedd.style.display = "inline";	
-            btnDat.style.display = "inline";	
 		    inputName.style.display ="none";
 			efterNamn.style.display ="none";
 			btnLimit.style.display = "inline";
@@ -228,9 +218,7 @@ let textLabel = document.getElementById('label');
 	       chat.style.display = "none";
 	       btnSend.style.display = "none";
            btnGitUt.style.display = "none";       
-	       btnSort.style.display = "none";
-           btnMedd.style.display = "none";	
-           btnDat.style.display = "none";	
+	       btnSort.style.display = "none";	
 	       btnLimit.style.display = "none";
 		   textLabel.style.display = "none";
 	  })
@@ -277,68 +265,7 @@ let textLabel = document.getElementById('label');
 	
 	
 	
-	
-	/*// sortering efter meddelande
-	
-	btnMedd.addEventListener('click', function(){	
-	
-	    let dbM = firebase.database();
-            dbM.ref('inputMessage/').orderByChild('message').on('value', function(snapshot) {
-	           snapshot.val();  // VARNING! Behåller inte sorteringen
-	           snapshot.forEach( child => {
-		       let objektM = child.val();// objekten kommer i ordning
-				   console.log (child.val());
-				   
-				    chatMeNamn.style.display ="inline";
-				    chat.style.display = "none";			   				   
 
-				   let li = document.createElement('li');
-		
-		 li.innerHTML = objektM.name + " " + objektM.message + " ," + objektM.postDate + "," + objektM.postTime;
-		 
-		 chatMeNamn.appendChild(li);
-	           })
-			   
-			   
-			 
-            });
-
-          });	
-	
-	
-	
-	
-	
-	
-	
-	// sortering efter datum
-	
-	btnDat.addEventListener('click', function(){	
-	
-	    let dbD = firebase.database();
-            dbD.ref('inputMessage/').orderByChild('postDate').on('value', function(snapshot) {
-	           snapshot.val();  // VARNING! Behåller inte sorteringen
-	           snapshot.forEach( child => {
-		       let objektD = child.val();// objekten kommer i ordning
-				   console.log (child.val());
-				   
-				    chatMeNamn.style.display ="inline";
-				    chat.style.display = "none";			   				   
-
-				   let li = document.createElement('li');
-		
-		 li.innerHTML = objektD.name + " " + objektD.name2 + " : " + objektD.message + " ," + objektD.postDate + "," + objektD.postTime;
-		 
-		 chatMeNamn.appendChild(li);
-	           })
-			   
-			   
-			 
-            });
-
-          });	
-	
-	*/
 	
 	// limitToLast(limit)
 	 
