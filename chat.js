@@ -340,40 +340,35 @@ let textLabel = document.getElementById('label');
 	
 	*/
 	
-	// limitToFirst(limit) OR limitToLast(limit)
+	// limitToLast(limit)
 	 
 	btnLimit.addEventListener('keypress',function(){
 		                     
-		  let lastLimitRef = firebase.database().ref('inputMessage/').limitToLast(3);
-		      lastLimitRef.on('value', function(snapshot) {
+		                   let lastLimitRef = firebase.database().ref('inputMessage/').limitToLast(3);
+		                   lastLimitRef.on('value', function(snapshot) {
 	                                                 snapshot.val();  
 	                                                 console.log(snapshot.val());
 				  
 				  
-				
-				  
-				  
-				   
-				    chatMeNamn.style.display ="inline";
-				    chat.style.display = "none";
+				           chatMeNamn.style.display ="inline";
+				           chat.style.display = "none";
 				 
 				  
 				  
-				  let dataobjectLimit = snapshot.val();
-	                  for(let i in dataobjectLimit){
-
-				              let li = document.createElement('li');
-		
-		            li.innerHTML = dataobjectLimit.name + " " + dataobjectLimit.name2 + " : " + dataobjectLimit.message + " ," + dataobjectLimit.postDate + "," + dataobjectLimit.postTime;
+				          let dataobjectLimit = snapshot.val();
+	                          for(let i in dataobjectLimit){
+								  console.log('dataobjekt',dataobjectLimit);
+                                  let li = document.createElement('li');
+								 li.innerHTML = dataobjectLimit.name + " " + dataobjectLimit.name2 + " : " + dataobjectLimit.message + " ," + dataobjectLimit.postDate + "," + dataobjectLimit.postTime;
 		 
 		             chatMeNamn.appendChild(li);
 	                }
 				  
 		   
-				                        }) 
+				                   }) 
 
-	                     });
-                                     
+	                });
+                                    
 	
 	
 	
