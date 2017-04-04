@@ -350,7 +350,7 @@ let textLabel = document.getElementById('label');
 		let xy = Number(btnLimit.value);
 		console.log(xy);
 		let dblimit = firebase.database();
-		dblimit.ref('inputMessage/')limitToFirst(xy).once('value', function(snapshot){
+		dblimit.ref('inputMessage/').limitToFirst(xy).once('value', function(snapshot){
 	    let dataobject = snapshot.val();
 	 for(let x in dataobject){
 		 let li = document.createElement('li');
