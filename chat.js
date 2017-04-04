@@ -352,15 +352,14 @@ let textLabel = document.getElementById('label');
 				  
 				
 				  
-				  let objektlit = child.val();// objekten kommer i ordning
-				   console.log (child.val());
+				  
 				   
 				    chatMeNamn.style.display ="inline";
 				    chat.style.display = "none";			   				   
 
 				  let li = document.createElement('li');
 		
-		 li.innerHTML = snapshot.name + " " + snapshot.name2 + " : " + snapshot.message + " ," + snapshot.postDate + "," + snapshot.postTime;
+		 li.innerHTML = snapshot.val().name + " " + snapshot.val().name2 + " : " + snapshot.val().message + " ," + snapshot.val().postDate + "," + snapshot.val().postTime;
 		 
 		 chatMeNamn.appendChild(li);
 				  
