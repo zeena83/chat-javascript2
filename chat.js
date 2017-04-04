@@ -359,15 +359,15 @@ let textLabel = document.getElementById('label');
 				 
 				  
 				  
-				  let dataobjectLimit = snapshot.val();
-	 for(let i in dataobjectLimit){
+				  let dataobject = snapshot.val();
+	                  for(let x in dataobject){
 
-				  let li = document.createElement('li');
+				              let li = document.createElement('li');
 		
-		 li.innerHTML = dataobjectLimit.name + " " + dataobjectLimit.name2 + " : " + dataobjectLimit.message + " ," + dataobjectLimit.postDate + "," + dataobjectLimit.postTime;
+		            li.innerHTML = dataobject.name + " " + dataobject.name2 + " : " + dataobject.message + " ," + dataobject.postDate + "," + dataobjectLimit.postTime;
 		 
-		 chatMeNamn.appendChild(li);
-	 }
+		             chatMeNamn.appendChild(li);
+	                }
 				  
 		   
 				                        }) 
