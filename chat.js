@@ -367,7 +367,7 @@ let textLabel = document.getElementById('label');
 		 li.innerHTML = dataobjectLimit.name + " " + dataobjectLimit.name2 + " : " + dataobjectLimit.message + " ," + dataobjectLimit.postDate + "," + dataobjectLimit.postTime;
 		 
 		 chatMeNamn.appendChild(li);
-				  
+	 }
 				  
 		   
 				                        }) 
