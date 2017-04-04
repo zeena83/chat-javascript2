@@ -355,11 +355,16 @@ let textLabel = document.getElementById('label');
 				  
 				   
 				    chatMeNamn.style.display ="inline";
-				    chat.style.display = "none";			   				   
+				    chat.style.display = "none";
+				 
+				  
+				  
+				  let dataobjectLimit = snapshot.val();
+	 for(let i in dataobjectLimit){
 
 				  let li = document.createElement('li');
 		
-		 li.innerHTML = snapshot.val().name + " " + snapshot.val().name2 + " : " + snapshot.val().message + " ," + snapshot.val().postDate + "," + snapshot.val().postTime;
+		 li.innerHTML = dataobjectLimit.name + " " + dataobjectLimit.name2 + " : " + dataobjectLimit.message + " ," + dataobjectLimit.postDate + "," + dataobjectLimit.postTime;
 		 
 		 chatMeNamn.appendChild(li);
 				  
