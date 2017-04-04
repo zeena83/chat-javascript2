@@ -343,21 +343,35 @@ let textLabel = document.getElementById('label');
 	// limitToLast(limit)
 	 
 	btnLimit.addEventListener('keypress',function(){
-		   chatMeNamn.innerHTML = "" ;   
+		   
+	   chatMeNamn.style.display ="inline";
+		chat.style.display = "none";
+		chatMeNamn.innerHTML = "" ;   
 		let xy = Number(btnLimit.value);
 		console.log(xy);
-		let lastLimitRef = firebase.database().ref('inputMessage/').limitToLast(xy);
-		lastLimitRef.once('value', function(snapshot) {
+		let dblimit = firebase.database();
+		dblimit.ref('inputMessage/')limitToFirst(xy).once('value', function(snapshot){
+	    let dataobject = snapshot.val();
+	 for(let x in dataobject){
+		 let li = document.createElement('li');
+		 //console.log('data', dataobject[x]);
+		 li.innerHTML = dataobject[x].name + " " + dataobject[x].name2 + " : " + dataobject[x].message + " ," + dataobject[x].postDate + "," + dataobject[x].postTime;
+		 chatMeNamn.appendChild(li);
+		 
+	 }//for loop
+	});//firebase
+	
+	
+	
+		/*let dblimit = firebase.database();
+		dblimit.ref('inputMessage/').limitToLast(xy).once('value', function(snapshot) {
 			//snapshot.val();
 			//console.log(snapshot.val());
 
 
-			chatMeNamn.style.display ="inline";
-			chat.style.display = "none";
 
-            
-
-			let dataobjectLimit = snapshot.val();
+			let dataobjectLimit = inputMessage.val();
+			 console.log(inputMessage.val());
 			for(let i in dataobjectLimit){
 				console.log('dataobjekt',i);
 				let x = dataobjectLimit[i];
@@ -365,13 +379,12 @@ let textLabel = document.getElementById('label');
 				li.innerHTML = x.name + " " + x.name2 + " : " + x.message + " ," + x.postDate + "," + x.postTime;
 
 				chatMeNamn.appendChild(li);
-			}
+			}*/
 
 
-		})
+		});//button event
 
-	});
-                                    
+                         
 	
 	
 	
