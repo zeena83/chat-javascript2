@@ -344,30 +344,30 @@ let textLabel = document.getElementById('label');
 	 
 	btnLimit.addEventListener('keypress',function(){
 		                     
-		                   let lastLimitRef = firebase.database().ref('inputMessage/').limitToLast(3);
-		                   lastLimitRef.on('value', function(snapshot) {
-	                                                 snapshot.val();  
-	                                                 console.log(snapshot.val());
-				  
-				  
-				           chatMeNamn.style.display ="inline";
-				           chat.style.display = "none";
-				 
-				  
-				  
-				          let dataobjectLimit = snapshot.val();
-	                          for(let i in dataobjectLimit){
-								  console.log('dataobjekt',dataobjectLimit);
-                                  let li = document.createElement('li');
-								 li.innerHTML = dataobjectLimit.name + " " + dataobjectLimit.name2 + " : " + dataobjectLimit.message + " ," + dataobjectLimit.postDate + "," + dataobjectLimit.postTime;
-		 
-		             chatMeNamn.appendChild(li);
-	                }
-				  
-		   
-				                   }) 
+		let lastLimitRef = firebase.database().ref('inputMessage/').limitToLast(3);
+		lastLimitRef.on('value', function(snapshot) {
+			//snapshot.val();
+			//console.log(snapshot.val());
 
-	                });
+
+			chatMeNamn.style.display ="inline";
+			chat.style.display = "none";
+
+
+
+			let dataobjectLimit = snapshot.val();
+			for(let i in dataobjectLimit){
+				console.log('dataobjekt',i);
+				let li = document.createElement('li');
+				li.innerHTML = i.name + " " + i.name2 + " : " + i.message + " ," + i.postDate + "," + i.postTime;
+
+				chatMeNamn.appendChild(li);
+			}
+
+
+		})
+
+	});
                                     
 	
 	
